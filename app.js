@@ -6,7 +6,7 @@ let amigos = [];
 function agregarAmigo() {
     let nombreAmigo = document.getElementById('amigo').value;
 
-    if (/\d/.test(nombreAmigo) || /\w/.test(nombreAmigo) || nombreAmigo.trim() === "") {
+    if (/\d/.test(nombreAmigo) || /\W/.test(nombreAmigo) || /\_/.test(nombreAmigo) || nombreAmigo.trim() === "") {
         alert("Por favor, inserte un nombre válido.");
     } else {
         amigos.push(nombreAmigo);
